@@ -14,7 +14,8 @@ redirect_from:
 
 # Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Nature Communications 2026</div><img src='images/Papers/SpatialCOC.png' alt="sym" style="width: 40%;"></div></div>
+<div class='paper-box'>
+<div class='paper-box-image'><div><div class="badge">Nature Communications 2026</div><img src='images/Papers/SpatialCOC.png' alt="sym" style="width: 40%;"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SpatialCOC: an integrative framework for spatial continuous mapping and cross-omics correction in spatial multi-omics data](https://www.nature.com/articles/s41467-026-71882-2f)
@@ -22,6 +23,9 @@ redirect_from:
 Mingxuan Li\*, Peisen Sun\*, Yisi Luo, Guancheng Zhou, Xiaofei Yang, Deyu Meng & Kai Ye<sup>#</sup>
 
 \*These authors contributed equally to this work.
+
+</div>
+</div>
 
 
 
