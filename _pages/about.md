@@ -14,29 +14,25 @@ redirect_from:
 
 # Publications
 
-```
-{% for pub in site.data.publications %}
-<div class="paper-box">
-  <div class="paper-box-image">
+{% assign publications = site.publications | sort: "order" %}
+{% for publication in publications %}
+<div class='paper-box'>
+  <div class='paper-box-image'>
     <div>
-      <div class="badge">{{ pub.journal }} {{ pub.year }}</div>
-      <img src="images/Papers/{{ pub.image }}" alt="{{ pub.title }}" style="width: 100%;">
+      {% if publication.venue %}<div class="badge">{{ publication.venue }}</div>{% endif %}
+      {% if publication.image %}<img src='{{ publication.image }}' alt="{{ publication.title | escape }}" style="width: {{ publication.image_width | default: '40%' }};">{% endif %}
     </div>
   </div>
-  <div class="paper-box-text" markdown="1">
-    [{{ pub.title }}]({{ pub.link }})
-    
-    {{ pub.authors }}
-    
-    {% if pub.note != "" %}
-    {{ pub.note }}
-    {% endif %}
+  <div class='paper-box-text'>
+    <p><a href="{{ publication.link }}">{{ publication.title }}</a></p>
+    {{ publication.content | markdownify }}
   </div>
 </div>
 {% endfor %}
-```
 
 # Awards
 
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+{% assign awards = site.awards | sort: "order" %}
+{% for award in awards %}
+- *{{ award.date_label }}* {{ award.content | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}
+{% endfor %}

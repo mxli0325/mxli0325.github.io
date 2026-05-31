@@ -83,6 +83,13 @@ defaults:
       layout: default
       author_profile: true
 
+# Collections
+collections:
+  publications:
+    output: false
+  awards:
+    output: false
+
 
 # Sass/SCSS
 sass:
