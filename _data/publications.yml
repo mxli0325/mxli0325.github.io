@@ -1,0 +1,32 @@
+- title: "SpatialCOC: an integrative framework for spatial continuous mapping and cross-omics correction in spatial multi-omics data"
+  link: "https://www.nature.com/articles/s41467-026-71882-2f"
+  journal: "Nature Communications"
+  year: 2026
+  authors: "Mingxuan Li*, Peisen Sun*, Yisi Luo, Guancheng Zhou, Xiaofei Yang, Deyu Meng & Kai Ye<sup>#</sup>"
+  note: "*These authors contributed equally to this work."
+  image: "SpatialCOC.png"
+  badge_color: "#1a73e8"   # 可选，不同期刊徽章颜色
+
+- title: "The evolution of high-order genome architecture revealed from 1,000 species"
+  link: "https://www.cell.com/cell/abstract/S0092-8674(26)00343-0"
+  journal: "Cell"
+  year: 2026
+  authors: "Yizhuo Che (车一卓), Stephen J. Bush, Hui Lin (林卉), Mingxuan Li (黎明轩), Xiaofei Yang (杨晓飞), Qi Xie (谢琦), Yuchun Liu (刘雨春), Deyu Meng (孟德宇), Kai Ye (叶凯)"
+  note: ""
+  image: "HiArch.jpg"
+
+- title: "STMiner: Gene-centric spatial transcriptomics for deciphering tumor tissues"
+  link: "https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00027-8"
+  journal: "Cell Genomics"
+  year: 2026
+  authors: "Peisen Sun (孙培森), Stephen J. Bush, Songbo Wang (王松渤), Peng Jia (贾鹏), Mingxuan Li (黎明轩), Tun Xu (徐暾), Pengyu Zhang (张鹏宇), Xiaofei Yang (杨晓飞), Chengyao Wang (王澄瑶), Linfeng Xu (许林峰), Tingjie Wang (王庭杰), Kai Ye (叶凯)<sup>#</sup>"
+  note: ""
+  image: "STMiner.jpg"
+
+- title: "Protocol to decipher complex spatial transcriptomics data using STMiner"
+  link: "https://www.sciencedirect.com/science/article/pii/S2666166725002448"
+  journal: "STAR Protocols"
+  year: 2025
+  authors: "Peisen Sun (孙培森)*, Mingxuan Li (黎明轩)*, Kai Ye (叶凯)<sup>#</sup>"
+  note: "* These authors contributed equally."
+  image: "STMiner_Protocol.jpg"
