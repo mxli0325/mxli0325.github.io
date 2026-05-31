@@ -2,8 +2,13 @@
 title: "Protocol to decipher complex spatial transcriptomics data using STMiner"
 venue: "STAR Protocols 2025"
 image: "images/Papers/STMiner_Protocol.jpg"
-image_width: "40%"
+image_width: "100%"
 link: "https://www.sciencedirect.com/science/article/pii/S2666166725002448"
+journal: "STAR Protocols"
+year: 2025
+impact_factor: "1.3"
+impact_factor_year: "2024 JCR"
+quartile: "Q4"
 order: 4
 ---
 

@@ -20,12 +20,18 @@ redirect_from:
   <div class='paper-box-image'>
     <div>
       {% if publication.venue %}<div class="badge">{{ publication.venue }}</div>{% endif %}
-      {% if publication.image %}<img src='{{ publication.image }}' alt="{{ publication.title | escape }}" style="width: {{ publication.image_width | default: '40%' }};">{% endif %}
+      {% if publication.image %}<img src='{{ publication.image }}' alt="{{ publication.title | escape }}" style="width: {{ publication.image_width | default: '100%' }};">{% endif %}
     </div>
   </div>
   <div class='paper-box-text'>
     <p><a href="{{ publication.link }}">{{ publication.title }}</a></p>
     {{ publication.content | markdownify }}
+    <p class="journal-info">
+      <strong>Journal:</strong> {{ publication.journal }}
+      · <strong>Year:</strong> {{ publication.year }}
+      · <strong>Impact Factor:</strong> {{ publication.impact_factor }}{% if publication.impact_factor_year %} ({{ publication.impact_factor_year }}){% endif %}
+      · <strong>Quartile:</strong> {{ publication.quartile }}
+    </p>
   </div>
 </div>
 {% endfor %}

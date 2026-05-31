@@ -1,9 +1,14 @@
 ---
 title: "STMiner: Gene-centric spatial transcriptomics for deciphering tumor tissues"
-venue: "Cell Genomics 2026"
+venue: "Cell Genomics 2025"
 image: "images/Papers/STMiner.jpg"
-image_width: "40%"
+image_width: "100%"
 link: "https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00027-8"
+journal: "Cell Genomics"
+year: 2025
+impact_factor: "9.0"
+impact_factor_year: "2024 JCR"
+quartile: "Q1"
 order: 3
 ---
 

@@ -2,8 +2,13 @@
 title: "The evolution of high-order genome architecture revealed from 1,000 species"
 venue: "Cell 2026"
 image: "images/Papers/HiArch.jpg"
-image_width: "40%"
+image_width: "100%"
 link: "https://www.cell.com/cell/abstract/S0092-8674(26)00343-0"
+journal: "Cell"
+year: 2026
+impact_factor: "42.5"
+impact_factor_year: "2024 JCR"
+quartile: "Q1"
 order: 2
 ---
 
