@@ -1,0 +1,29 @@
+{% assign author = site.author %}
+
+<div itemscope itemtype="http://schema.org/Person" class="profile_box">
+  {% if author.avatar %}
+    <div class="author__avatar">
+      <img src="{{ author.avatar }}" alt="{{ author.name }}">
+    </div>
+  {% endif %}
+
+  <div class="author__content">
+    {% if author.name %}<h3 class="author__name">{{ author.name }}</h3>{% endif %}
+    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+  </div>
+
+  <ul class="author__urls">
+    {% if site.description %}
+      <li>{{ site.description }}</li>
+    {% endif %}
+    {% if author.location %}
+      <li>{{ author.location }}</li>
+    {% endif %}
+    {% if author.email %}
+      <li><a href="mailto:{{ author.email }}">Email</a></li>
+    {% endif %}
+    {% if author.googlescholar %}
+      <li><a href="{{ author.googlescholar }}">Google Scholar</a></li>
+    {% endif %}
+  </ul>
+</div>

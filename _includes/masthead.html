@@ -1,0 +1,17 @@
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button class="greedy-nav__toggle hidden" type="button" aria-expanded="false" aria-controls="site-nav-hidden" aria-label="Toggle navigation">
+          <div class="navicon"></div>
+        </button>
+        <ul class="visible-links">
+          {% for link in site.data.navigation.main %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <ul id="site-nav-hidden" class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
