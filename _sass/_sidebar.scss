@@ -29,7 +29,7 @@
 
 .profile_box {
   display: grid;
-  grid-template-columns: 75px 1fr;
+  grid-template-columns: 90px 1fr;
   gap: 10px;
   align-items: center;
 
@@ -41,10 +41,10 @@
 .author__avatar {
   img {
     display: block;
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    max-width: 90px;
+    border-radius: 0;
 
     @include breakpoint($large) {
       width: 100%;
