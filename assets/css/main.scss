@@ -114,9 +114,13 @@ h1:before, .anchor:before {
     > div {
         max-width: 360px;
     }
+}
 
+.paper-box.award-box .award-box-image {
     img {
         display: block;
+        width: 100%;
+        max-width: 100%;
         height: 180px;
         object-fit: contain;
         border: 1px solid #e5e5e5;
@@ -134,7 +138,7 @@ h1:before, .anchor:before {
         margin-top: 0;
     }
 
-    .award-box-image img {
+    .paper-box.award-box .award-box-image img {
         height: 150px;
     }
 }

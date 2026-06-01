@@ -39,27 +39,19 @@ redirect_from:
 # Awards
 
 {% assign awards = site.awards | sort: "order" %}
+
+## International / National
+
 {% for award in awards %}
-<div class='paper-box award-box'>
-  <div class='paper-box-image award-box-image'>
-    <div>
-      {% if award.level %}<div class="badge">{{ award.level }}</div>{% endif %}
-      {% if award.certificate %}
-      <a href="{{ award.certificate | relative_url | xml_escape }}">
-        <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title_en | escape }}" loading="lazy">
-      </a>
-      {% endif %}
-    </div>
-  </div>
-  <div class='paper-box-text award-box-text'>
-    <div class="award-text-en">
-      <p class="award-title"><strong>{{ award.title_en }}</strong></p>
-      <p>{{ award.date_label }} · {{ award.prize_en }}{% if award.ranking %} <span class="award-ranking">({{ award.ranking }})</span>{% endif %}</p>
-    </div>
-    <div class="award-text-zh">
-      <p class="award-title"><strong>{{ award.title_zh }}</strong></p>
-      <p>{{ award.date_label }} · {{ award.prize_zh }}{% if award.ranking %} <span class="award-ranking">（{{ award.ranking }}）</span>{% endif %}</p>
-    </div>
-  </div>
-</div>
+  {% if award.level == "International" or award.level == "National" %}
+    {% include award-box.html award=award %}
+  {% endif %}
+{% endfor %}
+
+## Provincial
+
+{% for award in awards %}
+  {% if award.level == "Provincial" %}
+    {% include award-box.html award=award %}
+  {% endif %}
 {% endfor %}
