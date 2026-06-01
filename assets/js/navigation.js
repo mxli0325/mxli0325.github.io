@@ -67,44 +67,4 @@
     window.addEventListener("load", updateNav);
     updateNav();
   });
-
-  ready(function () {
-    var carousels = document.querySelectorAll("[data-award-carousel]");
-    if (!carousels.length) return;
-
-    Array.prototype.forEach.call(carousels, function (carousel) {
-      var viewport = carousel.querySelector(".award-carousel__viewport");
-      var prevButton = carousel.querySelector(".award-carousel__button--prev");
-      var nextButton = carousel.querySelector(".award-carousel__button--next");
-      if (!viewport || !prevButton || !nextButton) return;
-
-      function updateButtons() {
-        var maxScroll = viewport.scrollWidth - viewport.clientWidth;
-        var hasOverflow = maxScroll > 1;
-        carousel.classList.toggle("is-static", !hasOverflow);
-        prevButton.disabled = !hasOverflow || viewport.scrollLeft <= 1;
-        nextButton.disabled = !hasOverflow || viewport.scrollLeft >= maxScroll - 1;
-      }
-
-      function scrollAwards(direction) {
-        viewport.scrollBy({
-          left: direction * viewport.clientWidth * 0.85,
-          behavior: "smooth"
-        });
-      }
-
-      prevButton.addEventListener("click", function () {
-        scrollAwards(-1);
-      });
-
-      nextButton.addEventListener("click", function () {
-        scrollAwards(1);
-      });
-
-      viewport.addEventListener("scroll", updateButtons);
-      window.addEventListener("resize", updateButtons);
-      window.addEventListener("load", updateButtons);
-      updateButtons();
-    });
-  });
 }());
