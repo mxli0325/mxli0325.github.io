@@ -121,7 +121,7 @@ h1:before, .anchor:before {
         display: block;
         width: 100%;
         max-width: 100%;
-        height: 180px;
+        height: auto;
         object-fit: contain;
         border: 1px solid #e5e5e5;
         background: #fff;
@@ -134,12 +134,22 @@ h1:before, .anchor:before {
 }
 
 @include breakpoint($medium) {
+    .paper-box.award-box .award-box-image {
+        flex: 0 0 32%;
+        max-width: 32%;
+    }
+
+    .paper-box.award-box .award-box-text {
+        flex: 0 0 68%;
+        max-width: 68%;
+    }
+
     .award-box-text {
         margin-top: 0;
     }
 
     .paper-box.award-box .award-box-image img {
-        height: 150px;
+        height: auto;
     }
 }
 

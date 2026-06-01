@@ -4,9 +4,7 @@
     <div>
       {% if award.level %}<div class="badge">{{ award.level }}</div>{% endif %}
       {% if award.certificate %}
-      <a href="{{ award.certificate | relative_url | xml_escape }}">
-        <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title_en | escape }}" loading="lazy">
-      </a>
+      <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title_en | escape }}" loading="lazy">
       {% endif %}
     </div>
   </div>
