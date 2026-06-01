@@ -134,16 +134,6 @@ h1:before, .anchor:before {
 }
 
 @include breakpoint($medium) {
-    .paper-box.award-box .award-box-image {
-        flex: 0 0 32%;
-        max-width: 32%;
-    }
-
-    .paper-box.award-box .award-box-text {
-        flex: 0 0 68%;
-        max-width: 68%;
-    }
-
     .award-box-text {
         margin-top: 0;
     }
