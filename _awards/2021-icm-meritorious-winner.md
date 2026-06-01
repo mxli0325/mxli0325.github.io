@@ -1,6 +1,6 @@
 ---
 title_en: "Interdisciplinary Contest in Modeling"
-title_zh: "美国大学生数学建模竞赛"
+title_zh: "国际大学生数学建模竞赛"
 date_label: "2021"
 level: "International"
 prize_en: "Meritorious Winner"
