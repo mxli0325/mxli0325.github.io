@@ -103,3 +103,36 @@ h1:before, .anchor:before {
     color: $gray;
     font-size: $type-size-6;
 }
+
+.award-list {
+    margin-left: 0;
+    padding-left: 1.25em;
+
+    li {
+        margin-bottom: 1em;
+    }
+}
+
+.award-title {
+    margin-bottom: 0.15em;
+}
+
+.award-meta {
+    margin-bottom: 0.25em;
+    color: $gray;
+    font-size: $type-size-6;
+
+    span + span:before {
+        content: " | ";
+    }
+}
+
+.award-description {
+    p {
+        margin: 0 0 0.2em;
+    }
+}
+
+.award-certificate {
+    font-size: $type-size-6;
+}

@@ -39,6 +39,19 @@ redirect_from:
 # Awards
 
 {% assign awards = site.awards | sort: "order" %}
+<ul class="award-list">
 {% for award in awards %}
-- *{{ award.date_label }}* {{ award.content | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}
+  <li>
+    <div class="award-title"><strong>{{ award.title }}</strong></div>
+    <div class="award-meta">
+      {% if award.date_label %}<span>{{ award.date_label }}</span>{% endif %}
+      {% if award.level %}<span>{{ award.level }}</span>{% endif %}
+      {% if award.prize %}<span>{{ award.prize }}</span>{% endif %}
+    </div>
+    <div class="award-description">{{ award.content | markdownify }}</div>
+    {% if award.certificate %}
+      <a class="award-certificate" href="{{ award.certificate | relative_url | xml_escape }}">Certificate</a>
+    {% endif %}
+  </li>
 {% endfor %}
+</ul>
