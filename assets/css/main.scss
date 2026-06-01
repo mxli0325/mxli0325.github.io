@@ -104,35 +104,36 @@ h1:before, .anchor:before {
     font-size: $type-size-6;
 }
 
-.award-list {
-    margin-left: 0;
-    padding-left: 1.25em;
+.award-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+    margin: 0.75em 0 2em;
 
-    li {
-        margin-bottom: 1em;
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-.award-title {
-    margin-bottom: 0.15em;
-}
+.award-item {
+    margin: 0;
 
-.award-meta {
-    margin-bottom: 0.25em;
-    color: $gray;
-    font-size: $type-size-6;
-
-    span + span:before {
-        content: " | ";
+    a {
+        display: block;
     }
-}
 
-.award-description {
-    p {
-        margin: 0 0 0.2em;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #e5e5e5;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
     }
-}
 
-.award-certificate {
-    font-size: $type-size-6;
+    figcaption {
+        margin-top: 0.45em;
+        color: $gray;
+        font-size: $type-size-6;
+        line-height: 1.4;
+    }
 }

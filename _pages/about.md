@@ -39,19 +39,32 @@ redirect_from:
 # Awards
 
 {% assign awards = site.awards | sort: "order" %}
-<ul class="award-list">
+## International / National
+
+<div class="award-gallery">
 {% for award in awards %}
-  <li>
-    <div class="award-title"><strong>{{ award.title }}</strong></div>
-    <div class="award-meta">
-      {% if award.date_label %}<span>{{ award.date_label }}</span>{% endif %}
-      {% if award.level %}<span>{{ award.level }}</span>{% endif %}
-      {% if award.prize %}<span>{{ award.prize }}</span>{% endif %}
-    </div>
-    <div class="award-description">{{ award.content | markdownify }}</div>
-    {% if award.certificate %}
-      <a class="award-certificate" href="{{ award.certificate | relative_url | xml_escape }}">Certificate</a>
-    {% endif %}
-  </li>
+  {% if award.level == "International" or award.level == "National" %}
+    <figure class="award-item">
+      <a href="{{ award.certificate | relative_url | xml_escape }}">
+        <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title | escape }}" loading="lazy">
+      </a>
+      <figcaption>{{ award.date_label }} · {{ award.prize }}</figcaption>
+    </figure>
+  {% endif %}
 {% endfor %}
-</ul>
+</div>
+
+## Provincial
+
+<div class="award-gallery">
+{% for award in awards %}
+  {% if award.level == "Provincial" %}
+    <figure class="award-item">
+      <a href="{{ award.certificate | relative_url | xml_escape }}">
+        <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title | escape }}" loading="lazy">
+      </a>
+      <figcaption>{{ award.date_label }} · {{ award.prize }}</figcaption>
+    </figure>
+  {% endif %}
+{% endfor %}
+</div>
