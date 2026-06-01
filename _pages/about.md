@@ -41,30 +41,52 @@ redirect_from:
 {% assign awards = site.awards | sort: "order" %}
 ## International / National
 
-<div class="award-gallery">
+<div class="award-carousel award-carousel--national" data-award-carousel>
+  <button class="award-carousel__button award-carousel__button--prev" type="button" aria-label="Previous awards">&lsaquo;</button>
+  <div class="award-carousel__viewport">
+    <div class="award-carousel__track">
 {% for award in awards %}
   {% if award.level == "International" or award.level == "National" %}
-    <figure class="award-item">
-      <a href="{{ award.certificate | relative_url | xml_escape }}">
+      <a class="award-card" href="{{ award.certificate | relative_url | xml_escape }}" title="{{ award.date_label }} · {{ award.prize | escape }}">
         <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title | escape }}" loading="lazy">
       </a>
-      <figcaption>{{ award.date_label }} · {{ award.prize }}</figcaption>
-    </figure>
   {% endif %}
 {% endfor %}
+    </div>
+  </div>
+  <button class="award-carousel__button award-carousel__button--next" type="button" aria-label="Next awards">&rsaquo;</button>
 </div>
+
+<ul class="award-detail-list">
+{% for award in awards %}
+  {% if award.level == "International" or award.level == "National" %}
+  <li><strong>{{ award.date_label }}</strong> {{ award.title }} — {{ award.prize }}</li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 ## Provincial
 
-<div class="award-gallery">
+<div class="award-carousel award-carousel--provincial" data-award-carousel>
+  <button class="award-carousel__button award-carousel__button--prev" type="button" aria-label="Previous awards">&lsaquo;</button>
+  <div class="award-carousel__viewport">
+    <div class="award-carousel__track">
 {% for award in awards %}
   {% if award.level == "Provincial" %}
-    <figure class="award-item">
-      <a href="{{ award.certificate | relative_url | xml_escape }}">
+      <a class="award-card" href="{{ award.certificate | relative_url | xml_escape }}" title="{{ award.date_label }} · {{ award.prize | escape }}">
         <img src="{{ award.certificate | relative_url | xml_escape }}" alt="{{ award.title | escape }}" loading="lazy">
       </a>
-      <figcaption>{{ award.date_label }} · {{ award.prize }}</figcaption>
-    </figure>
   {% endif %}
 {% endfor %}
+    </div>
+  </div>
+  <button class="award-carousel__button award-carousel__button--next" type="button" aria-label="Next awards">&rsaquo;</button>
 </div>
+
+<ul class="award-detail-list">
+{% for award in awards %}
+  {% if award.level == "Provincial" %}
+  <li><strong>{{ award.date_label }}</strong> {{ award.title }} — {{ award.prize }}</li>
+  {% endif %}
+{% endfor %}
+</ul>

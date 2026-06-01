@@ -104,36 +104,93 @@ h1:before, .anchor:before {
     font-size: $type-size-6;
 }
 
-.award-gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25em;
-    margin: 0.75em 0 2em;
+.award-carousel {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.75em 0 0.9em;
+}
 
-    @include breakpoint($medium) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+.award-carousel.is-static {
+    .award-carousel__button {
+        display: none;
     }
 }
 
-.award-item {
-    margin: 0;
+.award-carousel__viewport {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 
-    a {
-        display: block;
+    &::-webkit-scrollbar {
+        display: none;
     }
+}
+
+.award-carousel__track {
+    display: flex;
+    gap: 0.75em;
+    width: 100%;
+}
+
+.award-carousel__button {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 1px solid #d6d6d6;
+    border-radius: 50%;
+    background: #fff;
+    color: $gray;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.35;
+    }
+}
+
+.award-card {
+    display: block;
+    flex: 0 0 64%;
+    scroll-snap-align: start;
 
     img {
         display: block;
         width: 100%;
-        height: auto;
+        height: 120px;
+        object-fit: contain;
         border: 1px solid #e5e5e5;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
+        background: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.14);
+    }
+}
+
+@include breakpoint($medium) {
+    .award-carousel--national .award-card {
+        flex-basis: calc((100% - 2.25em) / 4);
     }
 
-    figcaption {
-        margin-top: 0.45em;
-        color: $gray;
-        font-size: $type-size-6;
-        line-height: 1.4;
+    .award-carousel--provincial .award-card {
+        flex-basis: calc((100% - 1.5em) / 3);
+    }
+
+    .award-card img {
+        height: 135px;
+    }
+}
+
+.award-detail-list {
+    margin-top: 0;
+    margin-bottom: 1.75em;
+    padding-left: 1.25em;
+
+    li {
+        margin-bottom: 0.35em;
     }
 }
