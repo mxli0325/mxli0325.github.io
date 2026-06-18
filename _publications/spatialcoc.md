@@ -6,9 +6,9 @@ image_width: "100%"
 link: "https://www.nature.com/articles/s41467-026-71882-2"
 journal: "Nature Communications"
 year: 2026
-impact_factor: "15.7"
-impact_factor_year: "2024 JCR"
-quartile: "Q1"
+impact_factor: "18.1"
+impact_factor_year: "2025 JCR"
+quartile: "1区"
 order: 1
 ---
 

@@ -6,9 +6,9 @@ image_width: "100%"
 link: "https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00027-8"
 journal: "Cell Genomics"
 year: 2025
-impact_factor: "9.0"
+impact_factor: "9"
 impact_factor_year: "2024 JCR"
-quartile: "Q1"
+quartile: "1区"
 order: 3
 ---
 

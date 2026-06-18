@@ -6,9 +6,9 @@ image_width: "100%"
 link: "https://www.cell.com/cell/abstract/S0092-8674(26)00343-0"
 journal: "Cell"
 year: 2026
-impact_factor: "42.5"
-impact_factor_year: "2024 JCR"
-quartile: "Q1"
+impact_factor: "45.1"
+impact_factor_year: "2025 JCR"
+quartile: "1区"
 order: 2
 ---
 
