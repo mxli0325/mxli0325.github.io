@@ -8,7 +8,7 @@ journal: "Cell Genomics"
 year: 2025
 impact_factor: "9"
 impact_factor_year: "2024 JCR"
-quartile: "1区"
+quartile: "中科院1区"
 order: 3
 ---
 

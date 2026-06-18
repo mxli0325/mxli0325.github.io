@@ -8,7 +8,7 @@ journal: "STAR Protocols"
 year: 2025
 impact_factor: "1.3"
 impact_factor_year: "2024 JCR"
-quartile: "4区"
+quartile: "中科院4区"
 order: 4
 ---
 

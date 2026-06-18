@@ -8,7 +8,7 @@ journal: "Nature Communications"
 year: 2026
 impact_factor: "18.1"
 impact_factor_year: "2025 JCR"
-quartile: "1区"
+quartile: "中科院1区"
 order: 1
 ---
 
